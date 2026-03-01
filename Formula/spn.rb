@@ -5,9 +5,11 @@ class Spn < Formula
   version "0.3.0"
   license "MIT"
 
-  # Dependencies - installing spn installs these too
+  # Required dependency
   depends_on "supernovae-st/tap/nika"
-  depends_on "supernovae-st/tap/novanet"
+
+  # NovaNet is optional - spn works without it but `spn nv` commands won't work
+  # To install: brew install supernovae-st/tap/novanet (requires building from source)
 
   on_macos do
     on_arm do
@@ -35,12 +37,21 @@ class Spn < Formula
     bin.install "spn"
   end
 
+  def caveats
+    <<~EOS
+      NovaNet CLI is optional but recommended for full functionality.
+      Without it, `spn nv` commands will not work.
+
+      To install NovaNet (requires Rust):
+        cargo install --git https://github.com/supernovae-st/novanet.git
+    EOS
+  end
+
   test do
     # Test spn itself
     assert_match "spn", shell_output("#{bin}/spn --version")
 
-    # Test that dependencies are available
+    # Test that nika is available
     assert_match "nika", shell_output("nika --version")
-    assert_match "novanet", shell_output("novanet --version")
   end
 end
