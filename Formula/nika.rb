@@ -1,29 +1,34 @@
 # Formula/nika.rb
+# v0.20.0: 8-View TUI Architecture + Tree Widget + Two-Phase IR
 class Nika < Formula
   desc "Semantic YAML workflow engine for AI"
   homepage "https://github.com/supernovae-st/nika"
-  version "0.19.1"
+  version "0.20.0"
   license "AGPL-3.0-or-later"
 
   on_macos do
     on_arm do
-      url "https://github.com/supernovae-st/nika/releases/download/v0.19.1/nika-macos-arm64-0.19.1.tar.gz"
-      sha256 "78473894c533f3419e940fa17cdbb50c109e0f51006e987e11c084ec908c01d6"
+      url "https://github.com/supernovae-st/nika/releases/download/v0.20.0/nika-macos-arm64.tar.gz"
+      # SHA256 will be populated after release workflow completes
+      sha256 "PLACEHOLDER_ARM64_MAC"
     end
     on_intel do
-      url "https://github.com/supernovae-st/nika/releases/download/v0.19.1/nika-macos-x64-0.19.1.tar.gz"
-      sha256 "d4691042c9ff333880a5dfac3500309bca14fefb7bd187cc98f7f92931ac3ef1"
+      url "https://github.com/supernovae-st/nika/releases/download/v0.20.0/nika-macos-x64.tar.gz"
+      # SHA256 will be populated after release workflow completes
+      sha256 "PLACEHOLDER_X64_MAC"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/supernovae-st/nika/releases/download/v0.19.1/nika-linux-arm64-0.19.1.tar.gz"
-      sha256 "63f544da746523c182002ec76299034215d04a8fe769ca81ef81bbfe5588f2fd"
+      url "https://github.com/supernovae-st/nika/releases/download/v0.20.0/nika-linux-arm64.tar.gz"
+      # SHA256 will be populated after release workflow completes
+      sha256 "PLACEHOLDER_ARM64_LINUX"
     end
     on_intel do
-      url "https://github.com/supernovae-st/nika/releases/download/v0.19.1/nika-linux-x64-0.19.1.tar.gz"
-      sha256 "2ef776ce34f573bd93d0a1939e138049679503c81189c59abec2999cb45f6333"
+      url "https://github.com/supernovae-st/nika/releases/download/v0.20.0/nika-linux-x64.tar.gz"
+      # SHA256 will be populated after release workflow completes
+      sha256 "PLACEHOLDER_X64_LINUX"
     end
   end
 
