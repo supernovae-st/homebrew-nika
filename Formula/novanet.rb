@@ -2,12 +2,12 @@
 class Novanet < Formula
   desc "Knowledge graph CLI + TUI with MCP server for AI applications"
   homepage "https://github.com/supernovae-st/novanet"
-  version "0.14.0"
+  version "0.16.2"
   license "LicenseRef-Proprietary"
 
   # Build from source - no pre-built binaries available
   url "https://github.com/supernovae-st/novanet.git",
-      tag:      "v0.14.0",
+      tag:      "v0.16.2",
       revision: "HEAD"
 
   depends_on "rust" => :build
