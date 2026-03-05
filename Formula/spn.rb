@@ -13,23 +13,23 @@ class Spn < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/supernovae-st/supernovae-cli/releases/download/v0.10.0/spn-x86_64-apple-darwin.tar.gz"
-      sha256 "ab986c509e36e34ac3b0d43ff932adea246153d785bfc97b7ddb2a4ab4b4b3b2"
+      url "https://github.com/supernovae-st/supernovae-cli/releases/download/v0.10.0/spn-aarch64-apple-darwin.tar.gz"
+      sha256 "663f8ab14db7d409320ce9a6d8ba44d6714362b476e92b03f976c9c56f3f3f75"
     end
     on_intel do
-      url "https://github.com/supernovae-st/supernovae-cli/releases/download/v0.8.0/spn-x86_64-apple-darwin.tar.gz"
-      sha256 "1695722baaffb17b6a464977b1e08e12c4a048dbceeaf65eba06e2018e4513ad"
+      url "https://github.com/supernovae-st/supernovae-cli/releases/download/v0.10.0/spn-x86_64-apple-darwin.tar.gz"
+      sha256 "ab986c509e36e34ac3b0d43ff932adea246153d785bfc97b7ddb2a4ab4b4b3b2"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/supernovae-st/supernovae-cli/releases/download/v0.8.0/spn-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "a6da790f8d34438b30ea646e17aa20cdac215eee9411bc42cea3773b6e655c2e"
+      url "https://github.com/supernovae-st/supernovae-cli/releases/download/v0.10.0/spn-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "64fee77d25dbfbf3c4ea31f395879b9bf4ccdbb132b3be03de52f8ac821e4cb4"
     end
     on_intel do
-      url "https://github.com/supernovae-st/supernovae-cli/releases/download/v0.8.0/spn-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "7f3c76931a7e8894e48c33f8f9444e124e8a92526f7a6da4860c5b089203df30"
+      url "https://github.com/supernovae-st/supernovae-cli/releases/download/v0.10.0/spn-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "60177126bf9820d15862e88935655e9c0171e7cb2b30ad26009dbfe80ad5d276"
     end
   end
 
