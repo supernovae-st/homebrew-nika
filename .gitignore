@@ -8,6 +8,8 @@ Thumbs.db
 .idea/
 .vscode/
 
-# === PRIVATE DX ===
+# === PRIVATE DX (symlinks to shared dx/) ===
+.claude
 .claude/
+dx
 dx/
