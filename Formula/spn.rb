@@ -2,13 +2,13 @@
 class Spn < Formula
   desc "SuperNovae CLI - Package manager for AI workflows"
   homepage "https://github.com/supernovae-st/supernovae-cli"
-  version "0.14.2"
+  version "0.15.0"
   license "AGPL-3.0-or-later"
 
   on_macos do
     on_arm do
-      url "https://github.com/supernovae-st/supernovae-cli/releases/download/v0.14.2/spn-aarch64-apple-darwin.tar.gz"
-      sha256 "05a49c428d976ca1d816cfb962626bcf59f216ab181bb8fad7d68fba1ee7c19d"
+      url "https://github.com/supernovae-st/supernovae-cli/releases/download/v0.15.0/spn-x86_64-apple-darwin.tar.gz"
+      sha256 "085c369542af7acb60b702c355e33f897a2ebf0c06620422369483050149498f"
     end
     on_intel do
       url "https://github.com/supernovae-st/supernovae-cli/releases/download/v0.14.2/spn-x86_64-apple-darwin.tar.gz"
