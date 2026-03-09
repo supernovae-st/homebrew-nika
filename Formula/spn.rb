@@ -2,28 +2,28 @@
 class Spn < Formula
   desc "SuperNovae CLI - The Agentic AI Toolkit"
   homepage "https://github.com/supernovae-st/supernovae-cli"
-  version "0.15.3"
+  version "0.15.4"
   license "AGPL-3.0-or-later"
 
   on_macos do
     on_arm do
-      url "https://github.com/supernovae-st/supernovae-cli/releases/download/v0.15.3/spn-aarch64-apple-darwin.tar.gz"
-      sha256 "7a487f6b5d9e9d7431507948ac7a3e2ea3735cc1b9728f5dc862da90ce1cd0d0"
+      url "https://github.com/supernovae-st/supernovae-cli/releases/download/v0.15.4/spn-aarch64-apple-darwin.tar.gz"
+      sha256 "6603f53d856883a26947a6f7a294533ef0dbd1911afa3394eaad4e0d18ea1b60"
     end
     on_intel do
-      url "https://github.com/supernovae-st/supernovae-cli/releases/download/v0.15.3/spn-x86_64-apple-darwin.tar.gz"
-      sha256 "f81b50461368559b73f27e6e339fc322e72aa7c80fdcab5dd9853c3941c4c13c"
+      url "https://github.com/supernovae-st/supernovae-cli/releases/download/v0.15.4/spn-x86_64-apple-darwin.tar.gz"
+      sha256 "5b16984529851926ef23b4146af862e2f2c96031ad9a4c4c9fea80badf2212c6"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/supernovae-st/supernovae-cli/releases/download/v0.15.3/spn-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "dcd1aee51f7993a2c364c4861c98f9860109fb988df215e67a3174069e6c715e"
+      url "https://github.com/supernovae-st/supernovae-cli/releases/download/v0.15.4/spn-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "9c5ae218c26b71fa9e95d9649159a5704e0d81cdc892fcbb8d0efff60004687f"
     end
     on_intel do
-      url "https://github.com/supernovae-st/supernovae-cli/releases/download/v0.15.3/spn-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "67bdc81735174be7a08902dc9ce227eb7fa7d21dfd2d33e71fda600e8168bead"
+      url "https://github.com/supernovae-st/supernovae-cli/releases/download/v0.15.4/spn-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "db8b13e0675cd165d7596c11e178322917f82c0cce99514b61c867b3fcf8187d"
     end
   end
 
