@@ -1,4 +1,5 @@
 # Formula/spn.rb
+# v0.17.0: Model storage only, inference moved to Nika (ADR-008)
 class Spn < Formula
   desc "SuperNovae CLI - The Agentic AI Toolkit"
   homepage "https://github.com/supernovae-st/supernovae-cli"
