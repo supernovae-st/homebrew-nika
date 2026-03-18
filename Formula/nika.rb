@@ -1,30 +1,30 @@
 # Formula/nika.rb
-# v0.27.0: spn→nika Feature Fusion + Native Inference
+# v0.30.3: A+++ Quality Pass — CRLF compliance, NaN fixes, 34 property tests
 class Nika < Formula
   desc "Semantic YAML workflow engine for AI"
   homepage "https://github.com/supernovae-st/nika"
-  version "0.27.0"
+  version "0.30.3"
   license "AGPL-3.0-or-later"
 
   on_macos do
     on_arm do
-      url "https://github.com/supernovae-st/nika/releases/download/v0.27.0/nika-macos-arm64-0.27.0.tar.gz"
-      sha256 "dd516b97a4ed62a937668d0187b621a92c980b2b7bd11b0b6ee2ba505e0faef8"
+      url "https://github.com/supernovae-st/nika/releases/download/v0.30.3/nika-macos-arm64-0.30.3.tar.gz"
+      sha256 "e8192cd02829e8cfa516ecfc790a3a5debb51dd355cd067388c7755b6e4de23b"
     end
     on_intel do
-      url "https://github.com/supernovae-st/nika/releases/download/v0.27.0/nika-macos-x64-0.27.0.tar.gz"
-      sha256 "aea3475860824d4cab9a3788670d2ba77fc82a3c3a8115dc550d9053314db104"
+      url "https://github.com/supernovae-st/nika/releases/download/v0.30.3/nika-macos-x64-0.30.3.tar.gz"
+      sha256 "cbe9a954b2015f442a83249e48dffea5c9460ed158768279bd1d14dd4447544c"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/supernovae-st/nika/releases/download/v0.27.0/nika-linux-arm64-0.27.0.tar.gz"
-      sha256 "20be3331112d8981db12c6e444bee766aa0c9beeac2e9ce9b934718ddcc28408"
+      url "https://github.com/supernovae-st/nika/releases/download/v0.30.3/nika-linux-arm64-0.30.3.tar.gz"
+      sha256 "002ebbad2e3f01daa950dff96cd02aa62e46a4711819c452363d8941e1cdff09"
     end
     on_intel do
-      url "https://github.com/supernovae-st/nika/releases/download/v0.27.0/nika-linux-x64-0.27.0.tar.gz"
-      sha256 "73b94192fb264ef587eec920a436aa18aff1b04b94d03db31b267da5f9f2dafa"
+      url "https://github.com/supernovae-st/nika/releases/download/v0.30.3/nika-linux-x64-0.30.3.tar.gz"
+      sha256 "6db7146d40c5ab1055b59cded5045ac21e84fff2e540bd5d5ec2c7e05d4e14b4"
     end
   end
 
