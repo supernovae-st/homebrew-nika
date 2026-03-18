@@ -1,30 +1,30 @@
 # Formula/nika.rb
-# v0.30.6: Nuclear Purge + CLI UX — DAG visualization, canonical emojis
+# v0.30.7: DAG Art + Telemetry — double-line DAG viz, canonical emojis, trace links
 class Nika < Formula
   desc "Semantic YAML workflow engine for AI"
   homepage "https://github.com/supernovae-st/nika"
-  version "0.30.6"
+  version "0.30.7"
   license "AGPL-3.0-or-later"
 
   on_macos do
     on_arm do
-      url "https://github.com/supernovae-st/nika/releases/download/v0.30.6/nika-macos-arm64-0.30.6.tar.gz"
-      sha256 "1845ef4f23dade150f79c0862b2d3f35a0482d9957fd2d07f8298edd69e71048"
+      url "https://github.com/supernovae-st/nika/releases/download/v0.30.7/nika-macos-arm64-0.30.7.tar.gz"
+      sha256 "1459699e74c320c61b8bbc26a40d5a4a8bf6654d2290f5469ee49e208ca44902"
     end
     on_intel do
-      url "https://github.com/supernovae-st/nika/releases/download/v0.30.6/nika-macos-x64-0.30.6.tar.gz"
-      sha256 "38cc3daf65c16fd08a95160702460f9b4cb54a9b3994317d95d111ec71e241da"
+      url "https://github.com/supernovae-st/nika/releases/download/v0.30.7/nika-macos-x64-0.30.7.tar.gz"
+      sha256 "1212226af406baa95684c5708690b906d1a010e1c99a74fc55880a5503578ef9"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/supernovae-st/nika/releases/download/v0.30.6/nika-linux-arm64-0.30.6.tar.gz"
-      sha256 "cd031ce1f426dbda7050e3dfa8a35774369b64d53d1543cfe2e6a482a8a47377"
+      url "https://github.com/supernovae-st/nika/releases/download/v0.30.7/nika-linux-arm64-0.30.7.tar.gz"
+      sha256 "d1f46e73f9e3ce9867d6405f682660ec247b721cdae357dbf7ee10cda5b465a5"
     end
     on_intel do
-      url "https://github.com/supernovae-st/nika/releases/download/v0.30.6/nika-linux-x64-0.30.6.tar.gz"
-      sha256 "cbebe346c8aa35089eb0bd2af682a26c1d35eb4f50d2f815e13ca5e396700b15"
+      url "https://github.com/supernovae-st/nika/releases/download/v0.30.7/nika-linux-x64-0.30.7.tar.gz"
+      sha256 "a45957f38da6a827fb5bdaa9752caeea375e84475104d1786b28a291a4472984"
     end
   end
 
@@ -33,6 +33,6 @@ class Nika < Formula
   end
 
   test do
-    assert_match "nika", shell_output("#{bin}/nika --version")
+    assert_match "nika 0.30", shell_output("#{bin}/nika --version")
   end
 end
