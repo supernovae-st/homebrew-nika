@@ -1,30 +1,30 @@
 # Formula/nika.rb
-# v0.30.7: DAG Art + Telemetry — double-line DAG viz, canonical emojis, trace links
+# v0.30.8: Live DAG — in-place ANSI rendering during nika run
 class Nika < Formula
   desc "Semantic YAML workflow engine for AI"
   homepage "https://github.com/supernovae-st/nika"
-  version "0.30.7"
+  version "0.30.8"
   license "AGPL-3.0-or-later"
 
   on_macos do
     on_arm do
-      url "https://github.com/supernovae-st/nika/releases/download/v0.30.7/nika-macos-arm64-0.30.7.tar.gz"
-      sha256 "1459699e74c320c61b8bbc26a40d5a4a8bf6654d2290f5469ee49e208ca44902"
+      url "https://github.com/supernovae-st/nika/releases/download/v0.30.8/nika-macos-arm64-0.30.8.tar.gz"
+      sha256 "d814ada85dcba0a8900c3aa25a001ba168d66e80494e2f15bb6a8707dc5cffe9"
     end
     on_intel do
-      url "https://github.com/supernovae-st/nika/releases/download/v0.30.7/nika-macos-x64-0.30.7.tar.gz"
-      sha256 "1212226af406baa95684c5708690b906d1a010e1c99a74fc55880a5503578ef9"
+      url "https://github.com/supernovae-st/nika/releases/download/v0.30.8/nika-macos-x64-0.30.8.tar.gz"
+      sha256 "5c156d8491a25006c8adf3c66fdb07ca7f44c884b3724e5d88a1e75587a2424a"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/supernovae-st/nika/releases/download/v0.30.7/nika-linux-arm64-0.30.7.tar.gz"
-      sha256 "d1f46e73f9e3ce9867d6405f682660ec247b721cdae357dbf7ee10cda5b465a5"
+      url "https://github.com/supernovae-st/nika/releases/download/v0.30.8/nika-linux-arm64-0.30.8.tar.gz"
+      sha256 "fecebc0db2645e3d73a8d759fc160b345a81bbc4e42e6907c181da648b5f01a0"
     end
     on_intel do
-      url "https://github.com/supernovae-st/nika/releases/download/v0.30.7/nika-linux-x64-0.30.7.tar.gz"
-      sha256 "a45957f38da6a827fb5bdaa9752caeea375e84475104d1786b28a291a4472984"
+      url "https://github.com/supernovae-st/nika/releases/download/v0.30.8/nika-linux-x64-0.30.8.tar.gz"
+      sha256 "5df28e6adccd3b79f49ccc4444d51231f51eb0dfcf4b4269f2fae47902dd0e8a"
     end
   end
 
