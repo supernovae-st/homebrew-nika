@@ -1,11 +1,10 @@
 # Formula/nika.rb
-# v0.35.4: CLI Display Overhaul — event wiring, guardrails for infer, 7064+ tests
-# Features: TUI, keychain, media pipeline, LSP (Language Server Protocol)
+# v0.37.0: Schema @0.12 Only — zero backward compat, stop_sequences, nuclear cleanup
+# Features: TUI, media pipeline, LSP, 8 providers, 113 MCP aliases
 class Nika < Formula
-  desc "Semantic YAML workflow engine for AI — 5 verbs, 8 providers, 26 tools, LSP"
+  desc "Semantic YAML workflow engine for AI — 5 verbs, 8 providers, 43 tools, LSP"
   homepage "https://github.com/supernovae-st/nika"
-  url "https://github.com/supernovae-st/nika/archive/refs/tags/v0.35.4.tar.gz"
-  sha256 "e41a0794b234e844d88ad02aebd1b4d94928fc7376ec38d61da7030c76556f44"
+  url "https://github.com/supernovae-st/nika/archive/refs/tags/v0.37.0.tar.gz"
   license "AGPL-3.0-or-later"
   head "https://github.com/supernovae-st/nika.git", branch: "main"
 
@@ -15,17 +14,16 @@ class Nika < Formula
   def install
     cd "tools/nika" do
       system "cargo", "install", "--no-default-features",
-             "--features", "tui,native-keychain,media-core,lsp",
+             "--features", "tui,native-keychain,media-core,fetch-extract,fetch-article,fetch-feed,lsp",
              "--path", ".", "--root", prefix
     end
   end
 
   test do
-    assert_match "nika 0.35", shell_output("#{bin}/nika --version")
+    assert_match "nika 0.37", shell_output("#{bin}/nika --version")
 
-    # Verify check command works
     (testpath/"test.nika.yaml").write <<~YAML
-      schema: "@0.12"
+      schema: "nika/workflow@0.12"
       description: "Homebrew test"
       tasks:
         - id: hello
