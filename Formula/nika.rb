@@ -4,7 +4,7 @@ class Nika < Formula
   desc "Semantic YAML workflow engine for AI — 5 verbs, 8 providers, 26 tools"
   homepage "https://github.com/supernovae-st/nika"
   url "https://github.com/supernovae-st/nika/archive/refs/tags/v0.35.4.tar.gz"
-  sha256 "0f849ea32db0cba1814ac7512bb085dfa2031bbc75fef2406808ff81fbfe87d4"
+  sha256 "e41a0794b234e844d88ad02aebd1b4d94928fc7376ec38d61da7030c76556f44"
   license "AGPL-3.0-or-later"
   head "https://github.com/supernovae-st/nika.git", branch: "main"
 
