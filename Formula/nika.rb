@@ -1,10 +1,10 @@
 # Formula/nika.rb
-# v0.35.2: Fortress of Solitude — 49 bug fixes, pipe transforms, 6735+ tests
+# v0.35.3: Fortress of Solitude — 49 bug fixes, pipe transforms, 6735+ tests
 class Nika < Formula
   desc "Semantic YAML workflow engine for AI — 5 verbs, 8 providers, 26 tools"
   homepage "https://github.com/supernovae-st/nika"
-  url "https://github.com/supernovae-st/nika/archive/refs/tags/v0.35.2.tar.gz"
-  sha256 "8e36e6656bfbb0d6f9222eb74c9649206dc3d6a98e79e1905da1390d209037c4"
+  url "https://github.com/supernovae-st/nika/archive/refs/tags/v0.35.3.tar.gz"
+  sha256 "c8ad2f1072bd47dda1dbf2d5eaf185f6f60790f8dab9ba3e539359771f80825d"
   license "AGPL-3.0-or-later"
   head "https://github.com/supernovae-st/nika.git", branch: "main"
 
