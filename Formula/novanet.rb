@@ -1,15 +1,15 @@
 # Formula/novanet.rb
-# v0.16.2: Knowledge Graph CLI + TUI + MCP Server
+# v0.23.0: Knowledge Graph CLI + TUI + MCP Server
 class Novanet < Formula
   desc "Knowledge graph CLI + TUI with MCP server for AI applications"
   homepage "https://github.com/supernovae-st/novanet"
-  version "0.16.2"
+  version "0.23.0"
   license "LicenseRef-Proprietary"
 
   on_macos do
     on_arm do
-      url "https://github.com/supernovae-st/novanet/releases/download/v0.16.2/novanet-macos-arm64-0.16.2.tar.gz"
-      sha256 "28a3da1e7163f083d059472c7f4fc2150b7f626b8cb004c15f1c056fd9a67b06"
+      url "https://github.com/supernovae-st/novanet/releases/download/v0.23.0/novanet-macos-arm64-0.23.0.tar.gz"
+      sha256 "4d0e6c237c46b0de3b703b788d082db4be7c251b329f50edb5df6911c0327fa3"
     end
     on_intel do
       # TODO: Add x64 binary when CI releases are set up
