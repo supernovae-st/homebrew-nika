@@ -1,10 +1,11 @@
 # Formula/nika.rb
-# v0.37.0: Schema @0.12 Only — zero backward compat, stop_sequences, nuclear cleanup
-# Features: TUI, media pipeline, LSP, 8 providers, 113 MCP aliases
+# v0.38.0: Cargo workspace split — 10 crates (nika-core, nika-runtime, nika-ast, nika-dag, nika-binding, nika-mcp, nika-provider, nika-tui, nika-lsp, nika)
+# Features: TUI, keychain, media pipeline, LSP (Language Server Protocol)
 class Nika < Formula
-  desc "Semantic YAML workflow engine for AI — 5 verbs, 8 providers, 43 tools, LSP"
+  desc "Semantic YAML workflow engine for AI — 5 verbs, 8 providers, 10 workspace crates, LSP"
   homepage "https://github.com/supernovae-st/nika"
-  url "https://github.com/supernovae-st/nika/archive/refs/tags/v0.37.0.tar.gz"
+  url "https://github.com/supernovae-st/nika/archive/refs/tags/v0.38.0.tar.gz"
+  sha256 "e0af7b7cfd7482715dd240cbe55d607623ae6e7faa065e10362d21f1a5c73136"
   license "AGPL-3.0-or-later"
   head "https://github.com/supernovae-st/nika.git", branch: "main"
 
@@ -12,15 +13,15 @@ class Nika < Formula
   depends_on "pkg-config" => :build
 
   def install
-    cd "tools/nika" do
-      system "cargo", "install", "--no-default-features",
-             "--features", "tui,native-keychain,media-core,fetch-extract,fetch-article,fetch-feed,lsp",
-             "--path", ".", "--root", prefix
+    cd "tools" do
+      system "cargo", "install", "--path", "nika",
+             "--features", "tui,nika-daemon,media-core,lsp",
+             "--root", prefix
     end
   end
 
   test do
-    assert_match "nika 0.37", shell_output("#{bin}/nika --version")
+    assert_match "nika 0.38", shell_output("#{bin}/nika --version")
 
     (testpath/"test.nika.yaml").write <<~YAML
       schema: "nika/workflow@0.12"
