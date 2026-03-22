@@ -1,11 +1,11 @@
 # Formula/nika.rb
-# v0.39.0: Interactive course + init redesign — 12 levels, 44 exercises, cliclack wizard
+# v0.39.1: Quick wins + course improvements — watch mode, 3-star scoring, nika showcase
 # Features: TUI, keychain, media pipeline, LSP (Language Server Protocol)
 class Nika < Formula
   desc "Semantic YAML workflow engine for AI — 5 verbs, 8 providers, 10 workspace crates, LSP"
   homepage "https://github.com/supernovae-st/nika"
-  url "https://github.com/supernovae-st/nika/archive/refs/tags/v0.39.0.tar.gz"
-  sha256 "011f6ad217b1124c125669a4c6e28f216894650eef65b3cc0f529d7210a88773"
+  url "https://github.com/supernovae-st/nika/archive/refs/tags/v0.39.1.tar.gz"
+  sha256 "c1da17c60c4f54618b6530bb2620623ddd0b90bae5c2ca6b3bc9a44b9d1b649f"
   license "AGPL-3.0-or-later"
   head "https://github.com/supernovae-st/nika.git", branch: "main"
 
