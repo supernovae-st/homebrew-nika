@@ -1,11 +1,11 @@
 # Formula/nika.rb
-# v0.39.1: Quick wins + course improvements — watch mode, 3-star scoring, nika showcase
+# v0.40.2: Coherence audit — AI Integration Suite, GPT-4.1 cost, telemetry events
 # Features: TUI, keychain, media pipeline, LSP (Language Server Protocol)
 class Nika < Formula
   desc "Semantic YAML workflow engine for AI — 5 verbs, 8 providers, 10 workspace crates, LSP"
   homepage "https://github.com/supernovae-st/nika"
-  url "https://github.com/supernovae-st/nika/archive/refs/tags/v0.39.1.tar.gz"
-  sha256 "c1da17c60c4f54618b6530bb2620623ddd0b90bae5c2ca6b3bc9a44b9d1b649f"
+  url "https://github.com/supernovae-st/nika/archive/refs/tags/v0.40.2.tar.gz"
+  sha256 "f541f083902ca57194128875e97ad4462ac5ad442b4181c5985d09d4941e8228"
   license "AGPL-3.0-or-later"
   head "https://github.com/supernovae-st/nika.git", branch: "main"
 
@@ -21,7 +21,7 @@ class Nika < Formula
   end
 
   test do
-    assert_match "nika 0.39", shell_output("#{bin}/nika --version")
+    assert_match "nika 0.40", shell_output("#{bin}/nika --version")
 
     (testpath/"test.nika.yaml").write <<~YAML
       schema: "nika/workflow@0.12"
