@@ -20,6 +20,14 @@ class Nika < Formula
     end
   end
 
+  def post_install
+    # Trigger first-run setup: detect editors, install AI rules, start daemon.
+    # Non-fatal — setup retries on first `nika` command if this fails.
+    system bin/"nika", "--quiet", "daemon", "start"
+  rescue StandardError
+    # Silently ignore — setup will run on first nika command
+  end
+
   test do
     assert_match "nika 0.41", shell_output("#{bin}/nika --version")
 
