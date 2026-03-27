@@ -21,10 +21,13 @@ class Nika < Formula
   end
 
   def post_install
-    # Trigger first-run setup: detect editors, install AI rules, start daemon.
-    # Non-fatal — setup retries on first `nika` command if this fails.
-    system bin/"nika", "--quiet", "daemon", "start"
-  rescue StandardError
+    return unless OS.mac? || OS.linux?
+
+    # Non-fatal: setup will run on first nika command if this fails
+    Timeout.timeout(15) do
+      system bin/"nika", "--quiet", "daemon", "start"
+    end
+  rescue Timeout::Error, StandardError
     # Silently ignore — setup will run on first nika command
   end
 
