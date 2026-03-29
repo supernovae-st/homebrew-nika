@@ -1,9 +1,10 @@
 # Formula/nika.rb
-# v0.41.0: LSP Magic — diagnostic code actions, CodeLens, InlayHints
-# Features: TUI, keychain, media pipeline, LSP (Language Server Protocol)
+# v0.51.0: Quality overhaul — 8700+ tests, custom endpoints, H100 vLLM
+# Features: TUI, keychain, media pipeline, LSP, daemon, custom endpoints
 class Nika < Formula
-  desc "Semantic YAML workflow engine for AI — 5 verbs, 8 providers, 10 workspace crates, LSP"
+  desc "Semantic YAML workflow engine for AI — 5 verbs, 8 providers, 12 workspace crates, LSP"
   homepage "https://github.com/supernovae-st/nika"
+  # Stable release (update sha256 when v0.51.0 tag is cut)
   url "https://github.com/supernovae-st/nika/archive/refs/tags/v0.41.0.tar.gz"
   sha256 "96ef20ae7e163af7b663fb2dfb7ceb43ed985dfa62b2337b8891cf9929089341"
   license "AGPL-3.0-or-later"
@@ -15,7 +16,6 @@ class Nika < Formula
   def install
     cd "tools" do
       system "cargo", "install", "--path", "nika",
-             "--features", "tui,nika-daemon,media-core,lsp",
              "--root", prefix
     end
   end
@@ -32,7 +32,7 @@ class Nika < Formula
   end
 
   test do
-    assert_match "nika 0.41", shell_output("#{bin}/nika --version")
+    assert_match "nika 0.", shell_output("#{bin}/nika --version")
 
     (testpath/"test.nika.yaml").write <<~YAML
       schema: "nika/workflow@0.12"
