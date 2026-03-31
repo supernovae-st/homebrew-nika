@@ -1,12 +1,11 @@
 # Formula/nika.rb
-# v0.51.0: Quality overhaul — 8700+ tests, custom endpoints, H100 vLLM
-# Features: TUI, keychain, media pipeline, LSP, daemon, custom endpoints
+# v0.54.0: Security Hardening + Audit Fixes — 9057 tests, 91 E2E workflows
+# Features: TUI, media pipeline, LSP, daemon, custom endpoints, structured output
 class Nika < Formula
-  desc "Semantic YAML workflow engine for AI — 5 verbs, 8 providers, 12 workspace crates, LSP"
+  desc "Semantic YAML workflow engine for AI — 5 verbs, 9 providers, 12 workspace crates, LSP"
   homepage "https://github.com/supernovae-st/nika"
-  # Stable release (update sha256 when v0.51.0 tag is cut)
-  url "https://github.com/supernovae-st/nika/archive/refs/tags/v0.41.0.tar.gz"
-  sha256 "96ef20ae7e163af7b663fb2dfb7ceb43ed985dfa62b2337b8891cf9929089341"
+  url "https://github.com/supernovae-st/nika/archive/refs/tags/v0.54.0.tar.gz"
+  sha256 "a93dbe449bc09df2cb69cbc9caaf3bf986fd2208a526dda10b620f70ee835b38"
   license "AGPL-3.0-or-later"
   head "https://github.com/supernovae-st/nika.git", branch: "main"
 

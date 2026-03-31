@@ -42,4 +42,3 @@ cd nika && cargo build --release
 
 - [Nika](https://github.com/supernovae-st/nika)
 - [NovaNet](https://github.com/supernovae-st/novanet)
-- [SuperNovae CLI](https://github.com/supernovae-st/supernovae-cli)
