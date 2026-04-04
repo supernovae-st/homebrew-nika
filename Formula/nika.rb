@@ -3,26 +3,26 @@
 class Nika < Formula
   desc "Semantic YAML workflow engine for AI — 5 verbs, 9 providers, LSP"
   homepage "https://github.com/supernovae-st/nika"
-  version "0.65.1"
+  version "0.67.0"
   license "AGPL-3.0-or-later"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/supernovae-st/nika/releases/download/v#{version}/nika-macos-arm64-#{version}.tar.gz"
-      sha256 "7a7ae42037db37fcc99c751fb7d04a12526fad060ebc9e906d7659298ee80d29"
+      sha256 "f3bb2b49ff562d6a22cbb968d6b7c698b0fc53ea709e9210cf5750321d7bce5f"
     else
       url "https://github.com/supernovae-st/nika/releases/download/v#{version}/nika-macos-x64-#{version}.tar.gz"
-      sha256 "c2d35474799fb306d36814d3ea9e4203552f596d39dfca3079ec2b35119ea536"
+      sha256 "e1eaf554c1e455adda3af9e2a7a9f1628223a1f95c8d3ea16f1d6d5c14bcebda"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/supernovae-st/nika/releases/download/v#{version}/nika-linux-arm64-#{version}.tar.gz"
-      sha256 "d3238cd0f809aff8000f5401050dadb3a9d422e13db40ef8d3c743f0ff6d1cff"
+      sha256 "5c50650cd169e06094e916faf322e9a4f7f46b620105be2218a30c673e988260"
     else
       url "https://github.com/supernovae-st/nika/releases/download/v#{version}/nika-linux-x64-#{version}.tar.gz"
-      sha256 "7cd6f1b8c22a5c99d20539a2501e0c0bc5f52e154ebfd9119ac93a4f34f38533"
+      sha256 "65195b68a64a5a258b74993ddff9a6f7f242586c726fd33c54b1462df6febb0e"
     end
   end
 
