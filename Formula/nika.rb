@@ -1,37 +1,48 @@
-# Formula/nika.rb
-# v0.54.0: Security Hardening + Audit Fixes — 9057 tests, 91 E2E workflows
-# Features: TUI, media pipeline, LSP, daemon, custom endpoints, structured output
+# Formula/nika.rb — Pre-built binaries, multi-arch (macOS + Linux)
+# Updated automatically by CI on each release (release.yml → update-homebrew)
 class Nika < Formula
-  desc "Semantic YAML workflow engine for AI — 5 verbs, 9 providers, 12 workspace crates, LSP"
+  desc "Semantic YAML workflow engine for AI — 5 verbs, 9 providers, LSP"
   homepage "https://github.com/supernovae-st/nika"
-  url "https://github.com/supernovae-st/nika/archive/refs/tags/v0.54.0.tar.gz"
-  sha256 "a93dbe449bc09df2cb69cbc9caaf3bf986fd2208a526dda10b620f70ee835b38"
+  version "0.65.1"
   license "AGPL-3.0-or-later"
-  head "https://github.com/supernovae-st/nika.git", branch: "main"
 
-  depends_on "rust" => :build
-  depends_on "pkg-config" => :build
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/supernovae-st/nika/releases/download/v#{version}/nika-macos-arm64-#{version}.tar.gz"
+      sha256 "7a7ae42037db37fcc99c751fb7d04a12526fad060ebc9e906d7659298ee80d29"
+    else
+      url "https://github.com/supernovae-st/nika/releases/download/v#{version}/nika-macos-x64-#{version}.tar.gz"
+      sha256 "c2d35474799fb306d36814d3ea9e4203552f596d39dfca3079ec2b35119ea536"
+    end
+  end
+
+  on_linux do
+    if Hardware::CPU.arm?
+      url "https://github.com/supernovae-st/nika/releases/download/v#{version}/nika-linux-arm64-#{version}.tar.gz"
+      sha256 "d3238cd0f809aff8000f5401050dadb3a9d422e13db40ef8d3c743f0ff6d1cff"
+    else
+      url "https://github.com/supernovae-st/nika/releases/download/v#{version}/nika-linux-x64-#{version}.tar.gz"
+      sha256 "7cd6f1b8c22a5c99d20539a2501e0c0bc5f52e154ebfd9119ac93a4f34f38533"
+    end
+  end
 
   def install
-    cd "tools" do
-      system "cargo", "install", "--path", "nika",
-             "--root", prefix
-    end
+    bin.install "nika"
   end
 
   def post_install
     return unless OS.mac? || OS.linux?
 
-    # Non-fatal: setup will run on first nika command if this fails
+    # Non-fatal: daemon will start on first nika command if this fails
     Timeout.timeout(15) do
       system bin/"nika", "--quiet", "daemon", "start"
     end
   rescue Timeout::Error, StandardError
-    # Silently ignore — setup will run on first nika command
+    # Silently ignore — daemon starts on first use
   end
 
   test do
-    assert_match "nika 0.", shell_output("#{bin}/nika --version")
+    assert_match "nika #{version}", shell_output("#{bin}/nika --version")
 
     (testpath/"test.nika.yaml").write <<~YAML
       schema: "nika/workflow@0.12"
