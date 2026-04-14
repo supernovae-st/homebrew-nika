@@ -1,44 +1,47 @@
-# Homebrew Tap for SuperNovae
+# Nika — Homebrew Tap
 
-Official Homebrew tap for SuperNovae tools.
+Official Homebrew tap for [Nika](https://github.com/supernovae-st/nika), the
+semantic YAML workflow engine for AI — 5 verbs, 9 providers, LSP.
 
-## Installation
+## Install
 
 ```bash
-# Add the tap
-brew tap supernovae-st/tap
-
-# Install tools
-brew install nika      # Workflow engine only
-brew install novanet   # Knowledge graph only
-brew install spn       # Full suite (includes nika + novanet)
+brew install supernovae-st/tap/nika
 ```
 
-## Available Formulas
+Or tap first, then install:
 
-| Formula | Description |
-|---------|-------------|
-| `nika` | Semantic YAML workflow engine for AI |
-| `novanet` | Knowledge graph with MCP server |
-| `spn` | SuperNovae CLI - package manager (installs nika + novanet) |
+```bash
+brew tap supernovae-st/tap
+brew install nika
+```
 
-## Updating
+## Update
 
 ```bash
 brew update
-brew upgrade nika novanet spn
+brew upgrade nika
 ```
 
-## From Source
-
-All tools are written in Rust. To build from source:
+## Uninstall
 
 ```bash
-git clone https://github.com/supernovae-st/nika
-cd nika && cargo build --release
+brew uninstall nika
+brew untap supernovae-st/tap
 ```
+
+## What you get
+
+Prebuilt binaries for macOS (arm64, x86_64) and Linux (arm64, x86_64).
+After install, run `nika --help` to explore.
 
 ## Links
 
-- [Nika](https://github.com/supernovae-st/nika)
-- [NovaNet](https://github.com/supernovae-st/novanet)
+- [Nika source](https://github.com/supernovae-st/nika)
+- [Documentation](https://github.com/supernovae-st/nika#readme)
+- [Issues](https://github.com/supernovae-st/nika/issues)
+
+## License
+
+- Formula files in this repo: MIT
+- Nika itself: AGPL-3.0-or-later

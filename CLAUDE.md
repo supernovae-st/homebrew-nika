@@ -1,58 +1,53 @@
 # homebrew-tap
 
-**Homebrew Tap** for SuperNovae ecosystem tools.
+**Homebrew Tap** for [Nika](https://github.com/supernovae-st/nika).
 
 ## Installation
 
 ```bash
-brew tap supernovae-st/tap
-brew install spn          # Installs spn + nika + novanet
+brew install supernovae-st/tap/nika
 ```
 
 ## Formulas
 
-| Formula | Description | Dependencies |
-|---------|-------------|--------------|
-| `spn` | SuperNovae CLI (package manager) | nika, novanet |
-| `nika` | YAML workflow engine | - |
-| `novanet` | Knowledge graph CLI | - |
+| Formula | Description |
+|---------|-------------|
+| `nika` | Semantic YAML workflow engine for AI |
 
 ## Structure
 
 ```
 homebrew-tap/
 ├── Formula/
-│   ├── spn.rb        # Main CLI (depends on nika + novanet)
-│   ├── nika.rb       # Workflow engine
-│   └── novanet.rb    # Knowledge graph
-└── README.md
+│   └── nika.rb       # Workflow engine
+├── README.md
+└── CLAUDE.md
 ```
 
-## Updating Formulas
+## Updating the Formula
 
-When a new version is released:
+When a new Nika version is released:
 
-1. Update the `version` field
-2. Update the `url` to point to new release
-3. Update the `sha256` checksums for each platform
+1. Verify release assets exist: `gh release view vX.Y.Z --repo supernovae-st/nika --json assets`
+2. Update the `version` field in `Formula/nika.rb`
+3. Update each `sha256` from the `.sha256` files published alongside the tarballs
+4. Test locally: `brew install --build-from-source Formula/nika.rb`
 
-```ruby
-# Example: Formula/spn.rb
-version "0.2.0"
-url "https://github.com/supernovae-st/supernovae-cli/releases/download/v0.2.0/spn-aarch64-apple-darwin.tar.gz"
-sha256 "new_sha256_hash"
+The release tarball naming convention is:
+
+```
+nika-{macos|linux}-{arm64|x64}-{version}.tar.gz
 ```
 
 ## Related Repos
 
 | Repo | Description |
 |------|-------------|
-| [supernovae-cli](https://github.com/supernovae-st/supernovae-cli) | spn source code |
-| [nika](https://github.com/supernovae-st/nika) | nika source code |
-| [novanet](https://github.com/supernovae-st/novanet) | novanet source code |
+| [nika](https://github.com/supernovae-st/nika) | Nika source code |
 
 ## Conventions
 
 - Follow [Homebrew Formula Cookbook](https://docs.brew.sh/Formula-Cookbook)
-- Use multi-platform support with `on_macos`/`on_linux` blocks
-- Include SHA256 checksums for all downloads
+- Multi-platform support via `on_macos` / `on_linux` blocks
+- Include SHA256 checksums for every download
+- Only bump the formula when release assets are confirmed published
