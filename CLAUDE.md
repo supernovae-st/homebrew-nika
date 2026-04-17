@@ -26,6 +26,11 @@ homebrew-tap/
 
 ## Updating the Formula
 
+> As of 2026-04, the engine is in the Diamond rewrite (v0.80.0,
+> `nika-diamond` branch) and the binary is not being re-cut. The
+> formula stays pinned at v0.72.0 until the v0.9x arc ships a new
+> tagged release. Do not bump speculatively.
+
 When a new Nika version is released:
 
 1. Verify release assets exist: `gh release view vX.Y.Z --repo supernovae-st/nika --json assets`
