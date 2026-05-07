@@ -27,7 +27,8 @@ homebrew-tap/
 ## Updating the Formula
 
 > As of 2026-04, the engine is in the Diamond rewrite (v0.80.0,
-> `nika-diamond` branch) and the binary is not being re-cut. The
+> `main` branch · renamed 2026-05-06 from `nika-diamond` per
+> `dx/.claude/rules/nika-branch-topology.md`) and the binary is not being re-cut. The
 > formula stays pinned at v0.72.0 until the v0.9x arc ships a new
 > tagged release. Do not bump speculatively.
 
