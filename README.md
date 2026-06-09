@@ -1,14 +1,15 @@
 # Nika — Homebrew Tap
 
 Official Homebrew tap for [Nika](https://github.com/supernovae-st/nika),
-the semantic YAML workflow engine for AI.
+the sovereign, local-first YAML workflow language for AI (open language +
+single-binary Rust engine).
 
-> **Status (2026-04):** the tap currently pins `nika v0.72.0`, the last
-> binary cut from the legacy branch. The engine is now in the **Diamond
-> rewrite** (`nika-diamond` branch, v0.80.0, 6 / 40-42 foundation crates
-> admitted). No new binary releases ship until the v0.9x arc. The
-> published formula still installs v0.72.0 for users who need a working
-> CLI today — expect a refreshed formula once the Diamond binary ships.
+> **Status:** the tap pins `nika v0.72.0`, the last binary cut from the
+> legacy engine. The engine is now in the open **Diamond rewrite** (the
+> `main` branch — see the [engine repo](https://github.com/supernovae-st/nika)
+> for the live crate roster). No new binary releases ship until the v0.90
+> arc; the published formula still installs v0.72.0 for users who want a
+> working CLI today. A refreshed formula ships once the Diamond binary tags.
 
 ## Install
 
