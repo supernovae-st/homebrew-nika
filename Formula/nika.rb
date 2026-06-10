@@ -1,7 +1,7 @@
 # Formula/nika.rb — Pre-built binaries, multi-arch (macOS + Linux)
 # Updated automatically by CI on each release (release.yml → update-homebrew)
 class Nika < Formula
-  desc "Semantic YAML workflow engine for AI — 5 verbs, 9 providers, LSP"
+  desc "Intent as code — the open workflow language for AI, in Rust"
   homepage "https://github.com/supernovae-st/nika"
   version "0.72.0"
   license "AGPL-3.0-or-later"
