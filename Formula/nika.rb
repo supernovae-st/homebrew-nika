@@ -26,6 +26,10 @@ class Nika < Formula
     end
   end
 
+  def install
+    bin.install "nika"
+  end
+
   def caveats
     <<~EOS
       ⚠️  v0.72 is a LEGACY PREVIEW build (the pre-rewrite engine).
@@ -37,10 +41,6 @@ class Nika < Formula
       Follow the rebuild: https://nika.sh · spec:
       https://github.com/supernovae-st/nika-spec
     EOS
-  end
-
-  def install
-    bin.install "nika"
   end
 
   def post_install
