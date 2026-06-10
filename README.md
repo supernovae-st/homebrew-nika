@@ -4,9 +4,10 @@ Official Homebrew tap for [Nika](https://github.com/supernovae-st/nika),
 the sovereign, local-first YAML workflow language for AI (open language +
 single-binary Rust engine).
 
-> **Status:** the engine is pre-launch — its first complete public release
-> tags as `v0.90`. This tap is a placeholder until then; a working `nika`
-> formula ships when the binary tags. Follow [the engine
+> **Status:** the engine is pre-launch — the first runnable public binary
+> tags as `v0.81.0` (the vertical slice; the surface then completes through
+> `v0.8x` minors toward `v0.90`). This tap is a placeholder until then; the
+> working `nika` formula ships when that binary tags. Follow [the engine
 > repo](https://github.com/supernovae-st/nika) and [docs.nika.sh](https://docs.nika.sh).
 
 ## Install
