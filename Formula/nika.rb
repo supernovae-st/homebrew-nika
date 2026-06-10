@@ -30,6 +30,17 @@ class Nika < Formula
     bin.install "nika"
   end
 
+  def post_install
+    return unless OS.mac? || OS.linux?
+
+    # Non-fatal: daemon will start on first nika command if this fails
+    Timeout.timeout(15) do
+      system bin/"nika", "--quiet", "daemon", "start"
+    end
+  rescue Timeout::Error, StandardError
+    # Silently ignore — daemon starts on first use
+  end
+
   def caveats
     <<~EOS
       ⚠️  v0.72 is a LEGACY PREVIEW build (the pre-rewrite engine).
@@ -41,17 +52,6 @@ class Nika < Formula
       Follow the rebuild: https://nika.sh · spec:
       https://github.com/supernovae-st/nika-spec
     EOS
-  end
-
-  def post_install
-    return unless OS.mac? || OS.linux?
-
-    # Non-fatal: daemon will start on first nika command if this fails
-    Timeout.timeout(15) do
-      system bin/"nika", "--quiet", "daemon", "start"
-    end
-  rescue Timeout::Error, StandardError
-    # Silently ignore — daemon starts on first use
   end
 
   test do
