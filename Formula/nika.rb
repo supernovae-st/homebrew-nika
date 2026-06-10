@@ -26,6 +26,19 @@ class Nika < Formula
     end
   end
 
+  def caveats
+    <<~EOS
+      ⚠️  v0.72 is a LEGACY PREVIEW build (the pre-rewrite engine).
+      Nika is being rebuilt from scratch (the Diamond rewrite); the first
+      supported release is v0.81 — language v0.1 + a usable vertical
+      slice — shipping summer 2026. The workflow syntax this binary
+      accepts predates the `nika: v1` spec and WILL change.
+
+      Follow the rebuild: https://nika.sh · spec:
+      https://github.com/supernovae-st/nika-spec
+    EOS
+  end
+
   def install
     bin.install "nika"
   end
