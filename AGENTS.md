@@ -9,10 +9,10 @@ The official **Homebrew tap** for [Nika](https://github.com/supernovae-st/nika)
 
 ## Load-bearing facts (verify in-repo · never from memory)
 
-- The engine is **pre-launch**. The first runnable public binary tags
-  **`v0.81.0`** (the vertical slice) — the working formula ships with that
-  tag. The surface then completes through `v0.8x` minors (`v0.90` = the
-  full-surface milestone). The version communicated is always the real tag.
+- The engine is **pre-launch**. The current pre-release is **`0.90.0`**
+  (release candidate); the first public release tags as **`1.0.0`** — the
+  working formula ships with that tag. Features then arrive in `1.x` minors.
+  The version communicated is always the real tag.
 - The language spec lives at `supernovae-st/nika-spec` (Apache-2.0) ·
   the engine at `supernovae-st/nika` (AGPL-3.0-or-later) · docs at
   `docs.nika.sh`.
