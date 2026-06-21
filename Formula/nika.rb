@@ -58,12 +58,12 @@ class Nika < Formula
     assert_match "nika #{version}", shell_output("#{bin}/nika --version")
 
     (testpath/"test.nika.yaml").write <<~YAML
-      schema: "nika/workflow@0.12"
-      description: "Homebrew test"
+      nika: v1
+      workflow: brew-smoke
       tasks:
         - id: hello
-          exec: "echo hello"
+          exec: { command: "echo hello" }
     YAML
-    assert_match "DAG", shell_output("#{bin}/nika check #{testpath}/test.nika.yaml")
+    assert_match "PLAN", shell_output("#{bin}/nika check #{testpath}/test.nika.yaml")
   end
 end
