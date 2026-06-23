@@ -6,9 +6,8 @@ single-binary Rust engine).
 
 > **Status:** the engine is pre-launch — the current pre-release is
 > `0.90.0` (release candidate); the first public release tags as `1.0.0`,
-> after which features arrive in `1.x` minors. This tap is a placeholder
-> until then; the working `nika` formula ships when that binary tags. Follow
-> [the engine repo](https://github.com/supernovae-st/nika) and [docs.nika.sh](https://docs.nika.sh).
+> after which features arrive in `1.x` minors. The language envelope
+> `nika: v1` is already stable.
 
 ## Install
 
@@ -41,6 +40,17 @@ brew untap supernovae-st/tap
 
 Prebuilt binaries for macOS (arm64, x86_64) and Linux (arm64, x86_64)
 at the formula's pinned version. Run `nika --help` once installed.
+
+## First run
+
+```bash
+nika doctor          # environment + editor/agent readiness
+nika init            # repo-local schema, AGENTS.md, Cursor rule
+nika wire cursor     # explicit MCP wiring for Cursor agents
+```
+
+Use `nika wire all` to patch every supported client Nika can detect. Homebrew
+does not mutate editor configs automatically.
 
 ## Links
 

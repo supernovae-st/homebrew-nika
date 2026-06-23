@@ -31,6 +31,18 @@ class Nika < Formula
     bin.install "nika"
   end
 
+  def caveats
+    <<~EOS
+      Next steps:
+        nika doctor
+        nika init
+        nika wire cursor    # or: nika wire all
+
+      `nika init` scaffolds repo-local schema + agent rules.
+      `nika wire` is explicit and idempotent; Homebrew never mutates editor configs automatically.
+    EOS
+  end
+
   test do
     # The binary self-reports its version.
     assert_match version.to_s, shell_output("#{bin}/nika --version")
