@@ -36,10 +36,10 @@ class Nika < Formula
       Next steps:
         nika doctor
         nika init
-        nika wire cursor    # or: nika wire all
 
-      `nika init` scaffolds repo-local schema + agent rules.
-      `nika wire` is explicit and idempotent; Homebrew never mutates editor configs automatically.
+      `nika init` scaffolds repo-local schema + AGENTS.md for this release.
+      MCP wiring is explicit; use the editor extension or upgrade to a release
+      whose `nika --help` lists `wire`.
     EOS
   end
 

@@ -4,9 +4,9 @@ Official Homebrew tap for [Nika](https://github.com/supernovae-st/nika),
 the sovereign, local-first YAML workflow language for AI (open language +
 single-binary Rust engine).
 
-> **Status:** the engine is pre-launch — the current pre-release is
-> `0.90.0` (release candidate); the first public release tags as `1.0.0`,
-> after which features arrive in `1.x` minors. The language envelope
+> **Status:** the formula tracks the latest tagged release, currently
+> `0.90.0` (release candidate). The 1.0 public API lock ships when the
+> release gates are green, then features arrive in `1.x` minors. The language envelope
 > `nika: v1` is already stable.
 
 ## Install
@@ -45,12 +45,12 @@ at the formula's pinned version. Run `nika --help` once installed.
 
 ```bash
 nika doctor          # environment + editor/agent readiness
-nika init            # repo-local schema, AGENTS.md, Cursor rule
-nika wire cursor     # explicit MCP wiring for Cursor agents
+nika init            # repo-local schema + AGENTS.md
 ```
 
-Use `nika wire all` to patch every supported client Nika can detect. Homebrew
-does not mutate editor configs automatically.
+Homebrew does not mutate editor configs automatically. If your installed
+`nika --help` lists `wire`, run `nika wire cursor` or `nika wire all` for
+explicit MCP setup; otherwise use the editor extension setup.
 
 ## Links
 
