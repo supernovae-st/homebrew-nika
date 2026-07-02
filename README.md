@@ -1,11 +1,11 @@
-# Nika — Homebrew Tap
+# Nika Homebrew Tap
 
-Official Homebrew tap for [Nika](https://github.com/supernovae-st/nika) —
+Official Homebrew tap for [Nika](https://github.com/supernovae-st/nika):
 **Intent as Code**, the workflow language for AI: one file, 4 verbs, one
 binary. Sovereign, local-first (open language + single-binary Rust engine).
 
 > **Status:** the formula tracks the latest tagged release, currently
-> `0.91.0` (release candidate — the exact pin lives in
+> `0.91.0` (release candidate; the exact pin lives in
 > [`Formula/nika.rb`](Formula/nika.rb)). The 1.0 public API lock ships when
 > the release gates are green, then features arrive in `1.x` minors. The
 > language envelope `nika: v1` is already stable.
