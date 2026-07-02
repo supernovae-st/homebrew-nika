@@ -9,9 +9,11 @@ The official **Homebrew tap** for [Nika](https://github.com/supernovae-st/nika)
 
 ## Load-bearing facts (verify in-repo · never from memory)
 
-- The formula tracks the latest real Nika release tag, currently **`0.90.0`**.
-  `main` in the engine may be on a later `-dev` version; never publish that
-  through Homebrew until a matching release tag and assets exist.
+- The formula tracks the latest real Nika release tag — read it from
+  `Formula/nika.rb` (`version "…"`), never from memory or this file (a
+  hand-typed copy here drifted once: said 0.90.0 while the formula was on
+  0.91.0). `main` in the engine may be on a later `-dev` version; never
+  publish that through Homebrew until a matching release tag and assets exist.
 - The language spec lives at `supernovae-st/nika-spec` (Apache-2.0) ·
   the engine at `supernovae-st/nika` (AGPL-3.0-or-later) · docs at
   `docs.nika.sh`.
