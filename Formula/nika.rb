@@ -33,13 +33,18 @@ class Nika < Formula
 
   def caveats
     <<~EOS
-      Next steps:
-        nika doctor
-        nika init
+      First 60 seconds:
+        nika examples run 01-hello --model mock/echo    # offline proof - zero keys
+        nika doctor                                     # what's wired - what's missing
+        nika init                                       # wire THIS repo (editor schema - AGENTS.md - Cursor rule)
 
-      `nika init` scaffolds repo-local schema + AGENTS.md for this release.
-      MCP wiring is explicit; use the editor extension or upgrade to a release
-      whose `nika --help` lists `wire`.
+      Fully local, no API key (install ollama first):
+        ollama pull qwen3.5:4b
+        nika examples run 01-hello --model ollama/qwen3.5:4b
+
+      Editors and agents:
+        nika wire cursor|claude|vscode                  # explicit MCP wiring (idempotent)
+        nika new --from chain my-first.nika.yaml        # scaffold - then: nika check
     EOS
   end
 
