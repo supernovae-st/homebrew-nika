@@ -29,6 +29,7 @@ class Nika < Formula
 
   def install
     bin.install "nika"
+    generate_completions_from_executable(bin/"nika", "completions")
   end
 
   def caveats
