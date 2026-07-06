@@ -37,7 +37,11 @@ jobs:
           brew install supernovae-st/tap/nika
 
       - name: brew audit (formula in the installed tap)
-        run: brew audit --formula supernovae-st/tap/nika
+        # --except version: the binary-formula false positive — our urls
+        # interpolate `#{version}`, so brew re-scans the resolved url and
+        # calls the stanza redundant; the stanza is deliberately the ONE
+        # line scripts/release/update-formula.sh rewrites per release.
+        run: brew audit --except version --formula supernovae-st/tap/nika
 
       - name: brew test (the formula's own test block)
         run: brew test supernovae-st/tap/nika
@@ -52,4 +56,5 @@ jobs:
           nika completions fish >/dev/null
           # The embedded surfaces answer offline.
           nika spec --canon | head -3
-          nika examples run 01-hello --model mock/echo --no-trace-file
+          # examples run stages to a temp file and never journals — no flag needed.
+          nika examples run 01-hello --model mock/echo
