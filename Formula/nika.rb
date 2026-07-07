@@ -62,5 +62,19 @@ class Nika < Formula
           exec: { command: "echo hello" }
     YAML
     assert_match "PLAN", shell_output("#{bin}/nika check #{testpath}/t.nika.yaml")
+
+    # The engine must also EXECUTE, not just statically check — an install that
+    # can `check` but not `run` passes the line above yet is broken for users.
+    # A one-task infer under the mock provider is hermetic (no network, no key,
+    # no permits) and proves the run path end to end.
+    (testpath/"r.nika.yaml").write <<~YAML
+      nika: v1
+      workflow: brew-run-smoke
+      tasks:
+        - id: greet
+          infer: { prompt: "say hello" }
+    YAML
+    assert_match "1/1 done",
+      shell_output("#{bin}/nika run #{testpath}/r.nika.yaml --model mock/echo")
   end
 end
