@@ -35,8 +35,8 @@ class Nika < Formula
   def caveats
     <<~EOS
       First 60 seconds:
+        nika welcome                                    # what this machine has - where to start
         nika examples run 01-hello --model mock/echo    # offline proof - zero keys
-        nika doctor                                     # what's wired - what's missing
         nika init                                       # wire THIS repo (editor schema - AGENTS.md - Cursor rule)
 
       Fully local, no API key (install ollama first):
