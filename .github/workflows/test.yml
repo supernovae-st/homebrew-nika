@@ -26,6 +26,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: README carries no version literal (version-truth)
+        # The class that bit: the README said 0.91.0 while the formula
+        # pinned 0.97.0 — six releases of silent drift. The fix is
+        # structural: the pin lives in Formula/nika.rb ONLY; any
+        # `N.N.N` version literal in the README fails the gate.
+        # (Reads a repo file only — no user-controlled input.)
+        run: |
+          set -euo pipefail
+          if grep -nE '[0-9]+\.[0-9]+\.[0-9]+' README.md; then
+            echo '::error::README.md carries a version literal - the pin lives in Formula/nika.rb only'
+            exit 1
+          fi
+
       - name: brew style
         run: brew style ./Formula/nika.rb
 

@@ -46,6 +46,8 @@ class Nika < Formula
       Editors and agents:
         nika wire cursor|claude|vscode                  # explicit MCP wiring (idempotent)
         nika new --from chain my-first.nika.yaml        # scaffold - then: nika check
+
+      Learn: https://nika.sh - docs: https://docs.nika.sh
     EOS
   end
 
