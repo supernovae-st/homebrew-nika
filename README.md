@@ -53,7 +53,8 @@ at the formula's pinned version. Run `nika --help` once installed.
 ## First run
 
 ```bash
-nika doctor          # environment + editor/agent readiness
+nika welcome         # the mirror: what this machine has · where to start
+nika doctor          # environment + editor/agent readiness (the fixes)
 nika init            # repo-local schema + AGENTS.md
 ```
 
