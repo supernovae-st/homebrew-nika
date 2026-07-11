@@ -13,7 +13,7 @@ Official Homebrew tap for [Nika](https://github.com/supernovae-st/nika):
 **Intent as Code**, the workflow language for AI: one file, 4 verbs, one
 binary. Sovereign, local-first (open language + single-binary Rust engine).
 
-> **Status:** the formula tracks the latest tagged release — the exact pin
+> **Status:** the formula tracks the latest tagged release. The exact pin
 > lives in [`Formula/nika.rb`](Formula/nika.rb) (this README never repeats
 > it; a repeated number is a number that rots). The language envelope
 > `nika: v1` is already stable.
