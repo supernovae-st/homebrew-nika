@@ -12,7 +12,7 @@ brew install supernovae-st/tap/nika
 
 | Formula | Description |
 |---------|-------------|
-| `nika` | Semantic YAML workflow engine for AI |
+| `nika` | Workflow language for AI — audit before run, trace after |
 
 ## Structure
 
