@@ -2,8 +2,8 @@
 # Bumped by CI on each release (release.yml → bump homebrew tap) · manual fallback:
 # scripts/release/update-formula.sh (in the nika engine repo)
 class Nika < Formula
-  desc "Intent as Code — the open language + local runtime for AI workflows"
-  homepage "https://github.com/supernovae-st/nika"
+  desc "Workflow language for AI - audit pipelines before they run, trace after"
+  homepage "https://nika.sh"
   version "0.99.0"
   license "AGPL-3.0-or-later"
 
