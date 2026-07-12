@@ -7,11 +7,12 @@
   </a>
 </p>
 
-# Nika Homebrew Tap
+<h1 align="center">Nika Homebrew Tap</h1>
 
-Official Homebrew tap for [Nika](https://github.com/supernovae-st/nika):
-**Intent as Code**, the workflow language for AI: one file, 4 verbs, one
-binary. Sovereign, local-first (open language + single-binary Rust engine).
+<p align="center"><strong>One command, one binary.</strong><br>
+The official tap for <a href="https://github.com/supernovae-st/nika">Nika</a>:
+the workflow language for AI. One file, 4 verbs, one binary. Local-first,
+any model, AGPL-3.0.</p>
 
 > **Status:** the formula tracks the latest tagged release. The exact pin
 > lives in [`Formula/nika.rb`](Formula/nika.rb) (this README never repeats
@@ -24,52 +25,44 @@ binary. Sovereign, local-first (open language + single-binary Rust engine).
 brew install supernovae-st/tap/nika
 ```
 
-Or tap first, then install:
+<p align="center">
+  <img src="https://raw.githubusercontent.com/supernovae-st/nika/main/media/nika-hero.gif" alt="nika check audits the workflow (plan, cost, secrets, types), then nika run executes it locally" width="820">
+</p>
 
-```bash
-brew tap supernovae-st/tap
-brew install nika
-```
+## What the formula installs
 
-## Update
+Prebuilt binaries for macOS (arm64, x86_64) and Linux (arm64, x86_64),
+each pinned to a per-architecture sha256 checksum in
+[`Formula/nika.rb`](Formula/nika.rb). The formula is bumped by CI on every
+engine release; this README never repeats the version, because a repeated
+number is a number that rots.
 
-```bash
-brew update
-brew upgrade nika
-```
-
-## Uninstall
-
-```bash
-brew uninstall nika
-brew untap supernovae-st/tap
-```
-
-## What you get
-
-Prebuilt binaries for macOS (arm64, x86_64) and Linux (arm64, x86_64)
-at the formula's pinned version. Run `nika --help` once installed.
+Shell completions are generated from the binary itself at install time
+(bash, zsh, fish).
 
 ## First run
 
 ```bash
-nika welcome         # the mirror: what this machine has · where to start
-nika doctor          # environment + editor/agent readiness (the fixes)
-nika init            # repo-local schema + AGENTS.md
+nika welcome         # the mirror: what this machine has, where to start
+nika examples run 01-hello --model mock/echo   # offline proof, zero keys
+nika doctor          # environment + editor/agent readiness, with the fixes
+nika init            # repo wiring: schema, AGENTS.md, editor + agent files
 ```
 
-Homebrew does not mutate editor configs automatically. If your installed
-`nika --help` lists `wire`, run `nika wire cursor` or `nika wire all` for
-explicit MCP setup; otherwise use the editor extension setup.
+Homebrew never mutates your editor configs. Wiring an editor or agent to
+the MCP oracle is an explicit act: `nika wire cursor`, `nika wire all`.
 
-## Links
+## Update / uninstall
 
-- Engine source: [github.com/supernovae-st/nika](https://github.com/supernovae-st/nika)
-- Docs: [docs.nika.sh](https://docs.nika.sh)
-- Website: [nika.sh](https://nika.sh)
-- Issues: [github.com/supernovae-st/nika/issues](https://github.com/supernovae-st/nika/issues)
+```bash
+brew update && brew upgrade nika
+brew uninstall nika && brew untap supernovae-st/tap
+```
 
 ## License
 
-- Formula files in this repo: MIT
-- Nika itself: AGPL-3.0-or-later
+Formula files in this repo: MIT. Nika itself: AGPL-3.0-or-later.
+
+<p align="center">
+  <sub>Docs: <a href="https://docs.nika.sh">docs.nika.sh</a> · Engine: <a href="https://github.com/supernovae-st/nika">nika</a> · Issues: <a href="https://github.com/supernovae-st/nika/issues">engine tracker</a> · Templates: <a href="https://github.com/supernovae-st/nika-starter">nika-starter</a> · <a href="https://github.com/supernovae-st/nika-actions-starter">nika-actions-starter</a></sub>
+</p>
