@@ -61,7 +61,7 @@ class Nika < Formula
       workflow: brew-smoke
       tasks:
         - id: hello
-          exec: { command: "echo hello" }
+          exec: { command: ["echo", "hello"] }
     YAML
     assert_match "PLAN", shell_output("#{bin}/nika check #{testpath}/t.nika.yaml")
 
