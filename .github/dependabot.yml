@@ -1,0 +1,16 @@
+# Keep the tap CI's action pins fresh in one grouped weekly PR.
+#
+# Grouped on purpose: a split-pair action (codeql-action/init +
+# codeql-action/analyze must move in lockstep) landing as two separate
+# PRs drifts out of sync between merges. One grouped PR moves every pin
+# atomically (lesson: nika-spec 2026-07-19).
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      github-actions:
+        patterns:
+          - "*"
