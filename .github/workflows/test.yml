@@ -24,7 +24,7 @@ jobs:
     runs-on: macos-latest
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
 
       - name: README carries no version literal (version-truth)
         # The class that bit: the README said 0.91.0 while the formula
