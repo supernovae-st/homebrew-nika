@@ -40,6 +40,14 @@ number is a number that rots.
 Shell completions are generated from the binary itself at install time
 (bash, zsh, fish).
 
+**What you install is checksummed; what you run is contract-carrying.**
+Every workflow the installed binary runs can declare a `permits:` block:
+a default-deny boundary over filesystem paths, network hosts, exec
+programs and tool ids, enforced by the engine at runtime, not just
+parsed from YAML. Every run can leave a hash-chained trace, checked
+after the fact with `nika trace verify`. This tap's own CI runs on
+SHA-pinned actions with no user-controlled input reaching a shell.
+
 ## First run
 
 ```bash
