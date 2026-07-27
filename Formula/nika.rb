@@ -58,9 +58,10 @@ class Nika < Formula
     # A minimal nika: v1 workflow must pass static checking (the `check` ladder).
     (testpath/"t.nika.yaml").write <<~YAML
       nika: v1
-      workflow: brew-smoke
+      workflow:
+        id: brew-smoke
       tasks:
-        - id: hello
+        hello:
           exec: { command: ["echo", "hello"] }
     YAML
     assert_match "PLAN", shell_output("#{bin}/nika check #{testpath}/t.nika.yaml")
@@ -71,9 +72,10 @@ class Nika < Formula
     # no permits) and proves the run path end to end.
     (testpath/"r.nika.yaml").write <<~YAML
       nika: v1
-      workflow: brew-run-smoke
+      workflow:
+        id: brew-run-smoke
       tasks:
-        - id: greet
+        greet:
           infer: { prompt: "say hello" }
     YAML
     assert_match "1/1 done",
