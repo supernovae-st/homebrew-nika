@@ -60,6 +60,8 @@ class Nika < Formula
       nika: v1
       workflow:
         id: brew-smoke
+      permits:
+        exec: ["echo"]
       tasks:
         hello:
           exec: { command: ["echo", "hello"] }
