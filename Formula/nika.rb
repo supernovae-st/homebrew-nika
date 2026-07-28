@@ -10,20 +10,20 @@ class Nika < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/supernovae-st/nika/releases/download/v#{version}/nika-macos-arm64-#{version}.tar.gz"
-      sha256 "6cc316fcae5ff9e098ca464b2058f9ee7573803efd972e82f2f3eaf9c6d17c76"
+      sha256 "1229baff63ac10c6a8332a54681e3c463b5602f3214e9e14f0a6f0d4b029c14a"
     else
       url "https://github.com/supernovae-st/nika/releases/download/v#{version}/nika-macos-x64-#{version}.tar.gz"
-      sha256 "cba406367677a24378e99d797c3cf9c70124b33bb435e0c785931ceb42ff167c"
+      sha256 "9417e469bacdfeb0ded710b2fb46e014c55c3c08a3edb766cd1ad005979ce452"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/supernovae-st/nika/releases/download/v#{version}/nika-linux-arm64-#{version}.tar.gz"
-      sha256 "0ef72879426beb9d5776d5c1d4b85c9a76b4a4c0302ed08903606607f05f4779"
+      sha256 "9cfbcde5d2c980a3a2c9e3edd54a72573c4de3c7937cfb1320cd9bc3d5ef741f"
     else
       url "https://github.com/supernovae-st/nika/releases/download/v#{version}/nika-linux-x64-#{version}.tar.gz"
-      sha256 "7d8746f1af7870fcf77598ece20d0d8fae0dad001579bc149b2328306ecb660a"
+      sha256 "694d1a839492865f18bae23862622e6dfb8152dc449f9c777f4fe63bb00ae1f0"
     end
   end
 
