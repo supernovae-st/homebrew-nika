@@ -47,6 +47,11 @@ class Nika < Formula
         nika wire cursor|claude|vscode                  # explicit MCP wiring (idempotent)
         nika new --from chain my-first.nika.yaml        # scaffold - then: nika check
 
+      Agent plugin kit (skills - subagents - /nika:* commands - hooks - MCP, one bundle):
+        claude plugin marketplace add supernovae-st/nika-agents && claude plugin install nika@nika
+        codex plugin marketplace add supernovae-st/nika-agents && codex plugin add nika@nika
+        nika doctor                                     # is the suite coherent? (binary - kits - keys)
+
       Learn: https://nika.sh - docs: https://docs.nika.sh
     EOS
   end
