@@ -67,6 +67,33 @@ brew update && brew upgrade nika
 brew uninstall nika && brew untap supernovae-st/tap
 ```
 
+<!-- city:map -->
+## The city · where this repo sits
+
+```
+📜 nika-spec ──── the civil code · the law tables, the corpus, the exam
+    │ sync-pack: byte-gated mirror        │ projectors: drift-gated
+    ▼                                     ▼
+⚙️ nika ───────── the engine + the catalog (the yellow pages)
+    │ the release train                  🖥️ nika.sh · 📖 nika-docs
+    ▼                                     the showroom · the manual
+📦 homebrew-tap · npm · Docker ── the docks   ◀── you are here
+🔌 nika-client · 🎨 nika-vscode · 🤖 nika-agents ── the doors
+🏪 nika-registry ── the market · 🔍 nika-site-audit ── the witness
+```
+
+**This building** · THE DOCKS · the brew lane of the release train.
+
+**Consumes** · the engine's release assets (sha-pinned bottles · the heal follows the train).
+
+**Serves** · `brew install supernovae-st/tap/nika`.
+
+**Truth lives** · the formula follows releases · only the caveats are authored here.
+
+Every fact has one home · everything else is a gated projection.
+The living map: [nika.sh/map](https://nika.sh/map).
+<!-- /city:map -->
+
 ## License
 
 Formula files in this repo: MIT. Nika itself: AGPL-3.0-or-later.
