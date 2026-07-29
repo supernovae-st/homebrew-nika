@@ -84,6 +84,8 @@ brew uninstall nika && brew untap supernovae-st/tap
 
 **This building** · THE DOCKS · the brew lane of the release train.
 
+**Root** · neither · this building ships the ENGINE's artifacts. Every formula pins a released build by sha256 · nothing authoritative is typed here.
+
 **Consumes** · the engine's release assets (sha-pinned bottles · the heal follows the train).
 
 **Serves** · `brew install supernovae-st/tap/nika`.
