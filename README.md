@@ -29,6 +29,16 @@ brew install supernovae-st/tap/nika
   <img src="https://raw.githubusercontent.com/supernovae-st/nika/main/media/nika-hero.gif" alt="nika check audits the workflow (plan, cost, secrets, types), then nika run executes it locally" width="820">
 </p>
 
+## Your first minute
+
+Right after the install, the binary greets the machine and the first proof
+runs offline on the mock provider, zero keys (recorded against the released
+binary · `scripts/media/first-minute.tape`):
+
+<p align="center">
+  <img src="media/first-minute.gif" alt="nika welcome mirrors the machine (editors, local providers, keys, workspace), then nika examples run 01-hello executes the first workflow offline on mock/echo with the permits boundary shown and a typed greeting output" width="820">
+</p>
+
 ## What the formula installs
 
 Prebuilt binaries for macOS (arm64, x86_64) and Linux (arm64, x86_64),
