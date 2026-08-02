@@ -69,5 +69,5 @@ jobs:
           nika completions fish >/dev/null
           # The embedded surfaces answer offline.
           nika spec --canon | head -3
-          # examples run stages to a temp file and never journals — no flag needed.
-          nika examples run 01-hello --model mock/echo
+          # try is the rehearsal door — offline by default, nothing written.
+          nika try 01-hello

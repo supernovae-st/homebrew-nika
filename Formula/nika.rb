@@ -36,16 +36,16 @@ class Nika < Formula
     <<~EOS
       First 60 seconds:
         nika welcome                                    # what this machine has - where to start
-        nika examples run 01-hello --model mock/echo    # offline proof - zero keys
+        nika try 01-hello                               # offline proof - zero keys - nothing written
         nika init                                       # wire THIS repo (editor schema - AGENTS.md - Cursor rule)
 
       Fully local, no API key (install ollama first):
         ollama pull qwen3.5:4b
-        nika examples run 01-hello --model ollama/qwen3.5:4b
+        nika try 01-hello --model ollama/qwen3.5:4b
 
       Editors and agents:
         nika wire cursor|claude|vscode                  # explicit MCP wiring (idempotent)
-        nika new --from chain my-first.nika.yaml        # scaffold - then: nika check
+        nika new chain my-first.nika.yaml               # scaffold - then: nika check
 
       Agent plugin kit (skills - subagents - /nika:* commands - hooks - MCP, one bundle):
         claude plugin marketplace add supernovae-st/nika-agents && claude plugin install nika@nika

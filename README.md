@@ -36,7 +36,7 @@ runs offline on the mock provider, zero keys (recorded against the released
 binary · `scripts/media/first-minute.tape`):
 
 <p align="center">
-  <img src="media/first-minute.gif" alt="nika welcome mirrors the machine (editors, local providers, keys, workspace), then nika examples run 01-hello executes the first workflow offline on mock/echo with the permits boundary shown and a typed greeting output" width="820">
+  <img src="media/first-minute.gif" alt="nika welcome mirrors the machine (editors, local providers, keys, workspace), then nika try 01-hello rehearses the first workflow offline on the mock provider, zero keys, nothing written" width="820">
 </p>
 
 ## What the formula installs
@@ -62,7 +62,7 @@ SHA-pinned actions with no user-controlled input reaching a shell.
 
 ```bash
 nika welcome         # the mirror: what this machine has, where to start
-nika examples run 01-hello --model mock/echo   # offline proof, zero keys
+nika try 01-hello    # offline proof, zero keys, nothing written
 nika doctor          # environment + editor/agent readiness, with the fixes
 nika init            # repo wiring: schema, AGENTS.md, editor + agent files
 ```

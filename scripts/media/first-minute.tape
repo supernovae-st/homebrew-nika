@@ -37,7 +37,7 @@ Enter
 Type "# the first proof · offline · zero keys"
 Enter
 Sleep 700ms
-Type "nika examples run 01-hello --model mock/echo"
+Type "nika try 01-hello"
 Enter
 Sleep 3200ms
 Sleep 1400ms

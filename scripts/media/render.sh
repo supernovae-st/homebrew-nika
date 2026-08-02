@@ -6,7 +6,7 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-NAME="${1:-wire-all}"
+NAME="${1:-first-minute}"
 TAPE="$ROOT/scripts/media/$NAME.tape"
 [ -f "$TAPE" ] || { echo "no tape at $TAPE" >&2; exit 1; }
 command -v vhs >/dev/null || { echo "vhs not installed (brew install vhs)" >&2; exit 1; }
