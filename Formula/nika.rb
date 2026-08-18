@@ -60,11 +60,10 @@ class Nika < Formula
     # The binary self-reports its version.
     assert_match version.to_s, shell_output("#{bin}/nika --version")
 
-    # A minimal nika: v1 workflow must pass static checking (the `check` ladder).
+    # A minimal nine-key workflow must pass static checking (the `check` ladder).
+    # `nika: <id>` names the file (the 0.109 envelope · `workflow:` is gone).
     (testpath/"t.nika.yaml").write <<~YAML
-      nika: v1
-      workflow:
-        id: brew-smoke
+      nika: brew-smoke
       permits:
         exec: ["echo"]
       tasks:
@@ -78,9 +77,7 @@ class Nika < Formula
     # A one-task infer under the mock provider is hermetic (no network, no key,
     # no permits) and proves the run path end to end.
     (testpath/"r.nika.yaml").write <<~YAML
-      nika: v1
-      workflow:
-        id: brew-run-smoke
+      nika: brew-run-smoke
       tasks:
         greet:
           infer: { prompt: "say hello" }
