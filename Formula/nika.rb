@@ -4,26 +4,26 @@
 class Nika < Formula
   desc "Workflow language for AI - audit pipelines before they run, trace after"
   homepage "https://nika.sh"
-  version "0.109.2"
+  version "0.110.0"
   license "AGPL-3.0-or-later"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/supernovae-st/nika/releases/download/v#{version}/nika-macos-arm64-#{version}.tar.gz"
-      sha256 "ca27ede081822b58f2e2998a457a216de61b595f5ac57bfee90b6c5f1cef04e0"
+      sha256 "f2855c148ae81b2717a9aee85fb084d3f3f64bc9d283a3c4300c3f34541e5f15"
     else
       url "https://github.com/supernovae-st/nika/releases/download/v#{version}/nika-macos-x64-#{version}.tar.gz"
-      sha256 "0119fcc5fd0aed82aee191367c5386f1981d98f66079a42978ffa90787adfe1f"
+      sha256 "e2c16f57bb8552af3adb575b4c8a6dfd829895cc3844ea72bbcd401eb3496292"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/supernovae-st/nika/releases/download/v#{version}/nika-linux-arm64-#{version}.tar.gz"
-      sha256 "e44e719a35c018c20b11ffe98787cc3a35e3039318d1a42702a9fb625e831dec"
+      sha256 "2f84535fba911ea62f32341c211fd8a3af73b448958bcde54184a664ec5d2299"
     else
       url "https://github.com/supernovae-st/nika/releases/download/v#{version}/nika-linux-x64-#{version}.tar.gz"
-      sha256 "5d74fda732bf72bacd5ac252983c6e4dc91a66e270f521391b282da63d917cb4"
+      sha256 "54497caa3ad53f6ee6e4c14cff82d69cca926a72b50359a7ae353399fb3263a5"
     end
   end
 
