@@ -61,7 +61,7 @@ class Nika < Formula
     assert_match version.to_s, shell_output("#{bin}/nika --version")
 
     # A minimal nine-key workflow must pass static checking (the `check` ladder).
-    # `nika: <id>` names the file (the 0.109 envelope · `workflow:` is gone).
+    # Identity is `nika: <kebab-id>` (nine keys).
     (testpath/"t.nika.yaml").write <<~YAML
       nika: brew-smoke
       permits:
