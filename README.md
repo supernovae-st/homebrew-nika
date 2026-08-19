@@ -16,8 +16,9 @@ any model, AGPL-3.0.</p>
 
 > **Status:** the formula tracks the latest tagged release. The exact pin
 > lives in [`Formula/nika.rb`](Formula/nika.rb) (this README never repeats
-> it; a repeated number is a number that rots). The nine-key language
-> envelope is already stable.
+> it; a repeated number is a number that rots). Identity is
+> `nika: <kebab-id>` · nine keys. The language envelope is already
+> stable.
 
 ## Install
 
